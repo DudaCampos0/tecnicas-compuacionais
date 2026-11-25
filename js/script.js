@@ -33,10 +33,14 @@ function mostraAlternativas(){
 }
 
 function respostaSelecionada(opcaoSelecionada){
-        const afirmacoes = opcaoSelecionada.afirmacao;
         historiaFinal += afirmacoes + " ";
         atual++;
-        mostraPergunta();
+ if(opcaoSelecionada.proxima!=undefined){
+    atual=opcaoSelecionada.proxima;
+}
+else4{
+    mostraResultado();
+    return;
 }
 
 
